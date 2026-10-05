@@ -27,7 +27,7 @@ window.TROOP_CONFIG = {
   // You may also paste the full embed URL that starts with
   // https://calendar.google.com/calendar/embed?src=...
   // See README.md → "Google Calendar" for step-by-step instructions.
-  googleCalendarId: "5tespi39ansmoagd7onj1u3dh8@group.calendar.google.com",
+  googleCalendarId: "5tespi39ansmoqgd7onj1u3dh8@group.calendar.google.com",
   calendarTimeZone: "America/New_York",
 
   // --- Photo galleries ------------------------------------------------
