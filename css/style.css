@@ -35,15 +35,18 @@ img { max-width: 100%; display: block; }
   border-bottom: 4px solid var(--gold);
   position: sticky; top: 0; z-index: 10;
 }
-.header-inner { display: flex; align-items: center; justify-content: space-between; padding: .75rem 0; gap: 1rem; }
-.brand { display: flex; align-items: center; gap: .7rem; color: var(--white); text-decoration: none; }
-.brand-badge {
-  width: 44px; height: 44px; border-radius: 50%;
-  background: var(--gold); color: var(--navy);
-  display: grid; place-items: center; font-weight: 800; font-size: 1.1rem;
-  border: 3px solid var(--gold-light);
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: .5rem 0; gap: 1rem; }
+.brand { display: flex; align-items: center; gap: .85rem; color: var(--white); text-decoration: none; min-width: 0; }
+.brand:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 4px; border-radius: 8px; }
+.brand-logo {
+  height: 4.75rem;
+  width: auto;
+  max-width: none;
+  flex: 0 0 auto;
+  object-fit: contain;
 }
-.brand-text strong { display: block; font-size: 1.1rem; letter-spacing: .02em; }
+.brand-text { min-width: 0; line-height: 1.25; }
+.brand-text strong { display: block; font-size: 1.1rem; letter-spacing: .02em; line-height: 1.2; }
 .brand-text span { font-size: .8rem; color: var(--gold-light); }
 .site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: .25rem; }
 .site-nav a {
@@ -137,11 +140,21 @@ code {
 .site-footer { background: var(--navy-dark); color: #c7cfdf; padding: 2rem 0 1.25rem; font-size: .9rem; }
 .site-footer a { color: var(--gold-light); }
 .footer-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.footer-identity { display: flex; gap: .85rem; align-items: flex-start; }
+.footer-logo {
+  width: 3.4rem;
+  height: auto;
+  max-width: none;
+  flex: 0 0 auto;
+  margin-top: .15rem;
+}
 .footer-grid h4 { color: var(--white); margin: 0 0 .5rem; }
 .footer-note { border-top: 1px solid rgba(255,255,255,.12); margin-top: 1.5rem; padding-top: 1rem; font-size: .8rem; color: #8f9ab2; text-align: center; }
 
 /* Responsive */
 @media (max-width: 720px) {
+  .brand { gap: .6rem; }
+  .brand-logo { height: 3.75rem; }
   .nav-toggle { display: inline-block; }
   .site-nav { position: absolute; top: 100%; left: 0; right: 0; background: var(--navy); border-bottom: 4px solid var(--gold); display: none; }
   .site-nav.open { display: block; }
